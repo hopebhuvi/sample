@@ -1,0 +1,13 @@
+from django.db import models
+
+# Create your models here.
+class Emp(models.Model):
+    first_name=models.CharField(max_length=30,verbose_name="enter ur first name",help_text="anu")
+    last_name=models.CharField(max_length=30,verbose_name="enter ur last name")
+    email=models.EmailField(max_length=30)
+    class Meta:
+        db_table="tbl_emp"
+
+class Tech(models.Model):
+    first_name=models.CharField(max_length=30)
+    photo=models.ImageField(upload_to='images/')
